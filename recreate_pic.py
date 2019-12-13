@@ -24,14 +24,13 @@ def make_window(e, f):
 
 
 def main():
-    for z in range(25):
+    for z in range(30):
         make_star()
     pygame.draw.circle(main_surface, (180, 180, 180), (65, 90), 40, 0)
     points = [(0, 300, 25, 180), (25, 220, 65, 300), (65, 320, 85, 190), (150, 270, 80, 300), (200, 200, 80, 300),
               (280, 390, 60, 130), (325, 340, 60, 170), (375, 220, 65, 300), (420, 300, 30, 180)]
     for p in points:
         make_rect(p)
-
     make_window(38, 280)
     make_window(62, 300)
     make_window(38, 405)
