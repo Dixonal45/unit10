@@ -21,3 +21,5 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
+        if event.type == MOUSEBUTTONDOWN:
+            my_target.get_score(pygame.mouse.get_pos())
