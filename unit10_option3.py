@@ -13,6 +13,7 @@ pygame.display.set_caption("Target Game")
 main_surface.fill((255, 255, 255))
 my_target = target.Target(main_surface)
 my_target.draw_target()
+my_target.update_score()
 
 
 while True:

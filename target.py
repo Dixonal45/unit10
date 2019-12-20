@@ -29,23 +29,20 @@ class Target:
         elif target_color == (225, 0, 0, 255):
             self.update_score(7)
         elif target_color == (0, 0, 255, 255):
-            user_score = 5
+            self.update_score(5)
         elif target_color == (0, 0, 0, 255):
-            user_score = 3
+            self.update_score(3)
         elif target_color == (255, 255, 254, 255):
-            user_score = 1
-        else:
-            user_score = 0
+            self.update_score(1)
 
     def update_score(self, score):
         self.score += score
+        self.main_surface.blit(score)
 
-
-
-
-
-
-        # mouse_font = pygame.font.SysFont("Helvetica", 32)
-        # mouse_label = mouse_font.render(str(position), 1, (0, 0, 0))
-        # self.main_surface.blit(mouse_label, (30, 30))
+    def print_score(self):
+        self.main_surface.fill((255, 255, 255))
+        self.update_score()
+        mouse_font = pygame.font.SysFont("Helvetica", 32)
+        mouse_label = mouse_font.render(int(self.score), 1, (0, 0, 0))
+        self.main_surface.blit(mouse_label, (30, 30))
 
